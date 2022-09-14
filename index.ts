@@ -1,3 +1,4 @@
+{
 // function a (a: number, b: number):number;
 function a (a:number, b:number) {
   return a + b + 1;
@@ -76,4 +77,14 @@ interface F extends E {c: number, d: number[]};
 
 const obj4:F = {a:'asd', b:['1'], c:1, d:[1], e:1, asd: 23};
 
-interface E {e:number, a: string, asd:number}
+interface E {e:number, a: string, asd:number};
+
+interface G extends C { c: number, d:boolean };
+const obj5:G = {a:'1', b:['1'], c:1, d:true};
+
+/* 
+함수에서의 ()=>void 는 아무값도 return 하지 않겠다는 뜻 이지만
+메소드, 매개변수의 void 는 return 값이 뭐든 상관없이 사용가능 이란 뜻 
+*/
+
+}
